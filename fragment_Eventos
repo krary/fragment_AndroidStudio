@@ -1,0 +1,17 @@
+DEBEMOS IMPLEMENTAR EL ONCLICK LISTENER EN EL BOTON ESE SERIA EL PRIMER PASO
+
+Button boton =(Button)findViewById(R.id.nombre_boton);
+**************************************************************************
+boton.setOnClickListener(new View.OnClickListener(){
+  public vooid onClick(){
+  
+  Fragment fragment = new ClassFragment();
+  FragmentManager fragmentManager = getSupportFragmentManager();
+  FragmentTransaction fragmentTransaction = fragmentManager.begin();
+  fragmentTransaction.replace(R.id.remplazoFragment,fragment);
+  fragmentTransaction.addToBackStack(null);
+  fragmentTransaction.commit();
+    }
+
+    });
+***************************************************************************
